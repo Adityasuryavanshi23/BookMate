@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { DropDownLogin, DropDownLogOut, Search } from "../index";
 import { useCart } from "../../context/cartContext";
+import logo from "../../assets/images/logo.png";
 
 export const Header = () => {
   const [search, setSearch] = useState(false);
@@ -32,11 +33,7 @@ export const Header = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="/public/logo192.png"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
+            <img src={logo} className="h-8" alt="Flowbite Logo" />
             <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
               BookMate
             </span>
