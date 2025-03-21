@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router";
 import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { getUser, logout } from "../../utils";
-import { useEffect, useState } from "react";
 
 export const DropDownLogin = ({ setdropdown }) => {
   const nav = useNavigate();
