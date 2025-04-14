@@ -18,11 +18,15 @@ export const Login = () => {
         password: password.current.value,
       };
       const data = await login(authlogindetail);
+      email.current.value = "";
+      password.current.value = "";
       data.accessToken
         ? (navigate("/"),
           toast.success(`Succesfully Logged in ${data.user.name}`))
         : toast.error(data);
     } catch (err) {
+      email.current.value = "";
+      password.current.value = "";
       toast.error(err.message);
     }
   };
